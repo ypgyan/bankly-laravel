@@ -721,4 +721,40 @@ class Bankly
         $this->token = $response['access_token'];
         $this->token_expiry = now()->addSeconds($response['expires_in'])->unix();
     }
+
+    /**
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param string $token
+     * @return self
+     */
+    public function setToken(string $token)
+    {
+        $this->token = $token;
+        return $this;
+    }
+
+    /**
+     * @param string $tokenExpiry
+     * @return self
+     */
+    public function setTokenExpire(string $tokenExpiry)
+    {
+        $this->tokenExpiry = $token_expiry;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTokenExpire()
+    {
+        return $this->token_expiry;
+    }
 }

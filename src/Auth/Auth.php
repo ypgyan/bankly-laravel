@@ -118,6 +118,25 @@ final class Auth
         $this->token = $token;
         return $this;
     }
+
+    /**
+     * @param string $tokenExpiry
+     * @return self
+     */
+    public function setTokenExpire(string $tokenExpiry)
+    {
+        $this->tokenExpiry = $tokenExpiry;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTokenExpire()
+    {
+        return $this->tokenExpiry;
+    }
+
     /**
      * @return void
      */

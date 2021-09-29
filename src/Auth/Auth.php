@@ -110,6 +110,15 @@ final class Auth
     }
 
     /**
+     * @param string $token
+     * @return self
+     */
+    public function setToken(string $token)
+    {
+        $this->token = $token;
+        return $this;
+    }
+    /**
      * @return void
      */
     private function auth(): void
